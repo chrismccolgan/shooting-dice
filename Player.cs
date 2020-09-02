@@ -6,6 +6,7 @@ namespace ShootingDice
     {
         public string Name { get; set; }
         public int DiceSize { get; set; } = 6;
+        public string Taunt { get; set; }
 
         public virtual int Roll()
         {
@@ -19,8 +20,8 @@ namespace ShootingDice
             int myRoll = Roll();
             int otherRoll = other.Roll();
 
-            Console.WriteLine($"{Name} rolls a {myRoll}");
-            Console.WriteLine($"{other.Name} rolls a {otherRoll}");
+            Console.WriteLine($"{Taunt}{Name} rolls a {myRoll}");
+            Console.WriteLine($"{other.Taunt}{other.Name} rolls a {otherRoll}");
             if (myRoll > otherRoll)
             {
                 Console.WriteLine($"{Name} Wins!");

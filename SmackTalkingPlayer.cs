@@ -7,30 +7,10 @@ namespace ShootingDice
     // A Player who shouts a taunt every time they roll dice
     public class SmackTalkingPlayer : Player
     {
-        public string Taunt { get; set; }
-
-        public override void Play(Player other)
+        public SmackTalkingPlayer()
         {
-            // Call roll for "this" object and for the "other" object
-            int myRoll = Roll();
-            int otherRoll = other.Roll();
-            Taunt = "You stink";
-
-            Console.WriteLine($"{Name} rolls a {myRoll}. {Taunt}!");
-            Console.WriteLine($"{other.Name} rolls a {otherRoll}");
-            if (myRoll > otherRoll)
-            {
-                Console.WriteLine($"{Name} Wins!");
-            }
-            else if (myRoll < otherRoll)
-            {
-                Console.WriteLine($"{other.Name} Wins!");
-            }
-            else
-            {
-                // if the rolls are equal it's a tie
-                Console.WriteLine("It's a tie");
-            }
+            Taunt = "Stupid called, it said it's you! ";
         }
+
     }
 }

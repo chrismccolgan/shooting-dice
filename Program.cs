@@ -8,36 +8,46 @@ namespace ShootingDice
     {
         static void Main(string[] args)
         {
-            OneHigherPlayer player1 = new OneHigherPlayer();
-            player1.Name = "Bob OneHigher";
+            Player player1 = new Player();
+            player1.Name = "Bob";
 
-            SmackTalkingPlayer player2 = new SmackTalkingPlayer();
-            player2.Name = "Sue SmackTalker";
+            SmackTalkingPlayer smackTalker = new SmackTalkingPlayer();
+            smackTalker.Name = "Sue Smacktalker";
 
-            player2.Play(player1);
+            OneHigherPlayer oneHigher = new OneHigherPlayer();
+            oneHigher.Name = "Wilma Onehigher";
 
-            Console.WriteLine("-------------------");
-
-            Player player3 = new Player();
-            player3.Name = "Wilma";
-
-            player3.Play(player2);
-
-            Console.WriteLine("-------------------");
-
-            Player large = new LargeDicePlayer();
+            LargeDicePlayer large = new LargeDicePlayer();
             large.Name = "Bigun Rollsalot";
 
-            player1.Play(large);
+            HumanPlayer human = new HumanPlayer();
+            human.Name = "Henry Human";
 
+            CreativeSmackTalkingPlayer creative = new CreativeSmackTalkingPlayer();
+            creative.Name = "Creative Conan";
+
+            smackTalker.Play(player1);
+            Console.WriteLine("-------------------");
+
+            oneHigher.Play(player1);
+            Console.WriteLine("-------------------");
+
+            large.Play(smackTalker);
+            Console.WriteLine("-------------------");
+
+            human.Play(player1);
+            Console.WriteLine("-------------------");
+
+            creative.Play(smackTalker);
             Console.WriteLine("-------------------");
 
             List<Player> players = new List<Player>()
             {
                 player1,
-                player2,
-                player3,
-                large
+                smackTalker,
+                oneHigher,
+                large,
+                creative
             };
 
             PlayMany(players);
