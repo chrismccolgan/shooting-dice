@@ -20,8 +20,8 @@ namespace ShootingDice
             int myRoll = Roll();
             int otherRoll = other.Roll();
 
-            Console.WriteLine($"{Taunt}{Name} rolls a {myRoll}");
-            Console.WriteLine($"{other.Taunt}{other.Name} rolls a {otherRoll}");
+            Console.WriteLine($"{Name} rolls a {myRoll}");
+            Console.WriteLine($"{other.Name} rolls a {otherRoll}");
             if (myRoll > otherRoll)
             {
                 Console.WriteLine($"{Name} Wins!");
