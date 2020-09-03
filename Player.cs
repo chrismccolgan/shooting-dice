@@ -11,7 +11,6 @@ namespace ShootingDice
             // Return a random number between 1 and DiceSize
             return new Random().Next(DiceSize) + 1;
         }
-
         public virtual void Play(Player other)
         {
             // Call roll for "this" object and for the "other" object
@@ -30,7 +29,7 @@ namespace ShootingDice
             }
             else
             {
-                // if the rolls are equal it's a tie
+                // If the rolls are equal, it's a tie
                 Console.WriteLine("It's a tie");
             }
         }

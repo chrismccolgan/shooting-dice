@@ -20,7 +20,6 @@ namespace ShootingDice
             Taunt = creativeTaunt;
 
             Console.WriteLine($"{Name}: {Taunt}");
-            // Return a random number between 1 and DiceSize
             return new Random().Next(DiceSize) + 1;
         }
     }

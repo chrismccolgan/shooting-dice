@@ -34,7 +34,7 @@ namespace ShootingDice
             }
             catch
             {
-                Console.WriteLine("Get the car. I'm leaving now.");
+                Console.WriteLine("Get the car. We're leaving now.");
             }
         }
     }
