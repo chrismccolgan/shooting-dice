@@ -34,7 +34,7 @@ namespace ShootingDice
             }
             catch
             {
-                Console.WriteLine("I'm leaving now.");
+                Console.WriteLine("This game is rigged!");
             }
         }
     }
