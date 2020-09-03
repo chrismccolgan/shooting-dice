@@ -2,14 +2,11 @@ using System;
 
 namespace ShootingDice
 {
-    // TODO: Complete this class
-
-    // A Player who always roles one higher than the other player
+    // A Player who always rolls one higher than the other player
     public class OneHigherPlayer : Player
     {
         public override void Play(Player other)
         {
-            // Call roll for "this" object and for the "other" object
             int otherRoll = other.Roll();
             int myRoll = otherRoll + 1;
 
@@ -25,7 +22,6 @@ namespace ShootingDice
             }
             else
             {
-                // if the rolls are equal it's a tie
                 Console.WriteLine("It's a tie");
             }
         }
