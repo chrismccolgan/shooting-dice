@@ -26,6 +26,15 @@ namespace ShootingDice
             CreativeSmackTalkingPlayer creative = new CreativeSmackTalkingPlayer();
             creative.Name = "Creative Conan";
 
+            SoreLoserPlayer sore = new SoreLoserPlayer();
+            sore.Name = "Sally Soreloser";
+
+            UpperHalfPlayer upper = new UpperHalfPlayer();
+            upper.Name = "Uffie Upperhalf";
+
+            SoreLoserUpperHalfPlayer soreUpper = new SoreLoserUpperHalfPlayer();
+            soreUpper.Name = "Stephen Soreupper";
+
             smackTalker.Play(player1);
             Console.WriteLine("-------------------");
 
@@ -41,13 +50,26 @@ namespace ShootingDice
             creative.Play(smackTalker);
             Console.WriteLine("-------------------");
 
+            sore.Play(player1);
+            Console.WriteLine("-------------------");
+
+            upper.Play(player1);
+            Console.WriteLine("-------------------");
+
+            soreUpper.Play(player1);
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>()
             {
                 player1,
                 smackTalker,
                 oneHigher,
                 large,
-                creative
+                human,
+                creative,
+                upper,
+                sore,
+                soreUpper
             };
 
             PlayMany(players);

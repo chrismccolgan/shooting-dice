@@ -17,6 +17,5 @@ namespace ShootingDice
         {
             Taunt = "Stupid called, it said it's you!";
         }
-
     }
 }
